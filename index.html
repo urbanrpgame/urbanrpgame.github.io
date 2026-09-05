@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Life RP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,52 +13,77 @@
             padding: 20px;
             display: flex;
             justify-content: center;
-            margin: 0;
-        }
-        .logo-fixed {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 9999;
-            width: 64px;
-            height: auto;
-            border-radius: 12px;
-            border: 2px solid #ff444466;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             background: #1a1a1a;
             padding: 40px 30px;
             border-radius: 20px;
             border: 1px solid #ff444466;
             box-shadow: 0 0 50px #ff444422;
             text-align: center;
-            margin-top: 80px;
+        }
+        .avatar {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 3px solid #ff4444;
+            object-fit: cover;
+            margin-bottom: 16px;
         }
         h1 {
-            font-family: 'Russo One', sans-serif;
-            font-size: 48px;
+            font-size: 42px;
             color: #ff4444;
-            text-shadow: 0 0 25px #ff444488;
+            text-shadow: 0 0 20px #ff444488;
             margin-bottom: 4px;
-            letter-spacing: 2px;
         }
         .subtitle {
-            font-family: 'Russo One', sans-serif;
-            color: #aaa;
-            font-size: 18px;
-            letter-spacing: 3px;
+            color: #888;
+            font-size: 16px;
+            letter-spacing: 2px;
             margin-bottom: 24px;
         }
-        .description {
-            color: #ccc;
-            font-size: 16px;
-            line-height: 1.8;
+        .banner {
+            background: #cc0000;
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 20px;
+            border-radius: 12px;
             margin-bottom: 30px;
-            text-align: justify;
+            border: 2px solid #ff8888;
+            box-shadow: 0 0 30px #cc000088;
+            animation: pulse 1.8s infinite alternate;
         }
-        .description strong { color: #ff6666; }
+        @keyframes pulse {
+            0% { background: #aa0000; }
+            100% { background: #ff3333; }
+        }
+        .banner small {
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 10px;
+            color: #ffdddd;
+        }
+        .status-box {
+            background: #2a1a1a;
+            border: 1px solid #ff444466;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #ddd;
+        }
+        .status-box strong {
+            color: #ff6666;
+        }
+        .status-box .highlight {
+            color: #ffaa44;
+        }
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -67,8 +91,6 @@
             margin-top: 10px;
         }
         .btn {
-            font-family: 'Russo One', sans-serif;
-            letter-spacing: 1px;
             background: #ff4444;
             color: white;
             border: none;
@@ -92,60 +114,45 @@
             box-shadow: none;
         }
         .btn-outline:hover { background: #ff4444; }
-        .btn-secondary {
-            background: #333;
-            color: #fff;
-            box-shadow: none;
-            font-family: 'Russo One', sans-serif;
-        }
-        .btn-secondary:hover { background: #555; }
         .footer {
             margin-top: 40px;
             font-size: 13px;
             color: #555;
             border-top: 1px solid #2a2a2a;
             padding-top: 20px;
-            font-family: 'Segoe UI', Arial, sans-serif;
         }
         .footer a { color: #ff6666; text-decoration: none; }
         .note { color: #666; font-size: 14px; margin-top: 15px; }
         .version { color: #555; font-size: 12px; margin-top: 5px; }
-        .official-badge {
-            color: #ff4444;
-            font-family: 'Russo One', sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-            border: 1px solid #ff444466;
-            padding: 4px 16px;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
     </style>
 </head>
 <body>
-
-    <!-- Логотип слева вверху -->
-    <img src="logo.png" alt="Urban Life RP" class="logo-fixed">
-
     <div class="container">
-        <div class="official-badge">⭐ ОФИЦИАЛЬНЫЙ САЙТ</div>
+        <img src="logo.png" alt="Urban Life RP" class="avatar">
         <h1>🏙️ URBAN LIFE RP</h1>
         <div class="subtitle">Окунись в пульс большого города!</div>
 
-        <div class="description">
-            <p><strong>Добро пожаловать в Urban Life RP</strong> — реалистичную ролевую игру, где каждый сам пишет историю своей жизни в мегаполисе. Здесь нет готовых сценариев: твой путь зависит только от твоих решений.</p>
-            <p><strong>💼 Выбери свою судьбу.</strong> Стань успешным бизнесменом, который строит империю с нуля, честным полицейским, защищающим порядок на улицах, талантливым врачом, спасающим жизни, или, может быть, дерзким уличным гонщиком, покоряющим ночные трассы? А может, ты захочешь пойти по скользкой дорожке криминала — выбор за тобой. В Urban Life RP открыты все дороги!</p>
-            <p><strong>🏢 Живой город.</strong> Прокачивай навыки, покупай квартиры и машины, открывай собственные заведения или работай на кого-то — всё как в реальной жизни, но с безграничными возможностями. Взаимодействуй с другими игроками: создавай союзы, заключай сделки, разжигай конфликты или становись героем, который спасает район от хаоса.</p>
-            <p><strong>🤝 Сила сообщества.</strong> Город живёт благодаря игрокам: здесь рождаются легенды, создаются банды и корпорации, вспыхивают войны за территории и заключаются крепкие дружеские союзы. Участвуй в ивентах, следи за новостями города и влияй на его развитие — твои действия могут изменить весь игровой мир.</p>
-            <p><strong>🎮 Реализм и свобода.</strong> Мы стремимся к максимальной реалистичности: продуманная экономика, система профессий, правила и законы, которые делают игру живой. При этом у тебя всегда есть свобода выбора — пиши свою уникальную историю в ритме большого города.</p>
-            <p><strong>🔥 Готов стать частью Urban Life RP?</strong> Заходи, выбирай путь и создавай свою легенду среди небоскрёбов и неоновых огней! 🌟</p>
+        <div class="banner">
+            ⚠️ ВНИМАНИЕ! ИГРА ВЗЛОМАНА
+            <small>Разработка приостановлена до выяснения обстоятельств</small>
+        </div>
+
+        <div class="status-box">
+            <strong>🔐 Что произошло:</strong><br>
+            Игровой клиент был взломан из-за отсутствия должной защиты. APK удалён с сайта.<br><br>
+
+            <strong>🛠️ Что делается:</strong><br>
+            • Аккаунт владельца восстанавливается (ориентировочно завтра)<br>
+            • Ведущий разработчик <span class="highlight">Рома Алексеевич</span> готовит новую версию игры с усиленной защитой<br>
+            • Форум и Telegram-канал остаются активными<br><br>
+
+            <strong>📌 Важно:</strong><br>
+            Проект <strong>не закрыт</strong>. Мы возвращаемся после отпуска и восстановления. Следите за обновлениями в Telegram.
         </div>
 
         <div class="btn-group">
             <a href="https://t.me/UrbanLiferoleplay" class="btn">📱 Telegram-канал</a>
             <a href="https://whg120979.samp.date/" class="btn btn-outline" target="_blank">💬 Форум проекта</a>
-            <a href="https://disk.yandex.ru/d/zGucGUg-hg2QrQ" class="btn btn-secondary" download>📥 Скачать APK</a>
         </div>
 
         <div class="version">Версия: KRANIN NEW GLOBAL 16.67.1359</div>
@@ -155,6 +162,5 @@
             Urban Life RP © 2026 · Официальный сайт · <a href="https://t.me/UrbanLiferoleplay">Telegram</a>
         </div>
     </div>
-
 </body>
-  </html>
+</html>
